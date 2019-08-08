@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}		
+
+	<h1>{{inst.title}}</h1>
+	<!-- <p>Id : {{inst.id}}</p> -->
+	<p>Description : {{inst.description}}</p>
+	<p>Created Time : {{inst.created_time}}</p>
+	<p>Status : {{inst.status}}</p>
+	<p>Updated_time : {{inst.updated_time}}</p>
+	
+
+	<br>
+	<br>
+
+	<a href="{% url 'edit' id=inst.id %}">Update this record</a><br>	
+	<a href="{% url 'create' %}">Create new record</a>
+
+
+{% endblock %}
+
+

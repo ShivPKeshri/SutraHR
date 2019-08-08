@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
+	<br><br><a href="{% url 'create' %}">Create new record</a><br><br>
+
+	<h1>Records</h1>
+
+	{% for dt in data %}
+
+		<h1><a href="{% url 'detail' id=dt.id %}">{{dt.title}}</a></h1>
+		<p>Description : {{dt.description}}</p>
+		<p>Created Time : {{dt.created_time}}</p>
+		<p>Status : {{dt.status}}</p>
+		<p>Updated Time : {{dt.updated_time}}</p>
+		
+	{% endfor %}
+
+
+{% endblock %}

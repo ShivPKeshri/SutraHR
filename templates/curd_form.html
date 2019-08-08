@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+		<h1>Curd Operation Form</h1>{% csrf_token %}
+		<form method='POST', action=''>
+			
+			{{ form.as_p }}
+
+			<input type="submit" value="Create or Update">
+		</form>
+		
+{% endblock %}
+		
